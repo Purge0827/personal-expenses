@@ -2,9 +2,9 @@
 
 Is a practice project of a tutorial
 
-![expenses1](content/expenses1.png)
+<img src="content/expenses1.png" width="60%">
 
-![expenses2](content/expenses2.png)
+<img src="content/expenses2.png" width="60%">
 
 ## Getting Started
 
