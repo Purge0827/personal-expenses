@@ -1,6 +1,6 @@
 # expenses
 
-A new Flutter project.
+Personal expenses is a practice project of a tutorial
 
 ## Getting Started
 
