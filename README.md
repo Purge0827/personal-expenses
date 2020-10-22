@@ -1,4 +1,4 @@
-# Persnal expenses
+# Personal expenses
 
 Is a practice project of a tutorial
 
