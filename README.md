@@ -1,6 +1,10 @@
-# expenses
+# Persnal expenses
 
-Personal expenses is a practice project of a tutorial
+Is a practice project of a tutorial
+
+![expenses1](content/expenses1.png)
+
+![expenses2](content/expenses2.png)
 
 ## Getting Started
 
