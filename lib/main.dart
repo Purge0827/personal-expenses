@@ -21,7 +21,8 @@ class MyApp extends StatelessWidget {
             title: TextStyle(
                 fontFamily: 'OpenSans',
                 fontSize: 18,
-                fontWeight: FontWeight.bold)),
+                fontWeight: FontWeight.bold),
+            button: TextStyle(color: Colors.white)),
         appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
                 title: TextStyle(fontFamily: 'OpenSans', fontSize: 20))),
@@ -45,15 +46,21 @@ class _MyHomePageState extends State<MyHomePage> {
         title: 'Playstation 5')
   ];
 
-  void _addNewTransaction(String txtTitle, double txtAmount) {
+  void _addNewTransaction(String txtTitle, double txtAmount, DateTime txtdate) {
     final newTransaction = Transaction(
         id: DateTime.now().toString(),
         amount: txtAmount,
-        date: DateTime.now(),
+        date: txtdate, //DateTime.now(),
         title: txtTitle);
 
     setState(() {
       _userTransactions.add(newTransaction);
+    });
+  }
+
+  void _deleteTransaction(int index) {
+    setState(() {
+      _userTransactions.removeAt(index);
     });
   }
 
@@ -95,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Chart(_recentTransactions),
-            TransactionList(_userTransactions)
+            TransactionList(_userTransactions, _deleteTransaction)
           ],
         ),
       ),
